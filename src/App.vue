@@ -9,7 +9,7 @@
   import TheHeader from "./components/TheHeader.vue";
   import TheMain from "./components/TheMain.vue";
 
-  import {store, fetchMovies} from "./store";
+  import {store, fetchMovies, fetchSeries} from "./store";
 
   export default {
     components: {TheHeader, TheMain},
@@ -22,7 +22,8 @@
       onSearch(searchMovie){
         this.store.searchText = searchMovie;
 
-        fetchMovies()
+        fetchMovies();
+        fetchSeries();
       }
     },
   }

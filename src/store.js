@@ -22,3 +22,19 @@ export function fetchMovies (){
         store.movies = resp.data.results
     })
 }
+
+export function fetchSeries (){
+    const url = "https://api.themoviedb.org/3"
+    axios.get (url + "/search/tv", {
+        params: {
+            api_key: "fcd0efb0330e31fac39428b19332a411",
+            query: store.searchText,
+            language: "it-IT"
+        }
+    })
+    .then ((resp) => {
+        console.log (resp.data.results);
+
+        store.series = resp.data.results
+    })
+}
