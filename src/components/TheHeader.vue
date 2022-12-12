@@ -1,5 +1,25 @@
 <!-- searchbar: input + button -->
 
-<template></template>
+<template>
+    <header>
+        <div>
+            <input type="text" v-model="filterMovies">
+            <button @click="onSearchClick">Cerca</button>
+        </div>
+    </header>
+</template>
 
-<script></script>
+<script>
+    export default {
+        data() {
+            return {
+                filterMovies:""
+            }
+        },
+        methods: {
+            onSearchClick(){
+                this.$emit("searchName", this.filterMovies);
+            }
+        }
+    }
+</script>
