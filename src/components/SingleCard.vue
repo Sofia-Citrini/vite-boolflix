@@ -6,6 +6,10 @@
         <li>Titolo Originale: {{keyTitleOriginal}}</li>
         <li>Lingua: {{movie.original_language}}</li>
         <li>Voto: {{movie.vote_average}}</li>
+        <li>
+            <img :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`" 
+            alt="">
+        </li>
     </ul>
 </template>
 
