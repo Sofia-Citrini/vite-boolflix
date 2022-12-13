@@ -1,8 +1,8 @@
 <template>
-  <TheHeader @searchName="onSearch"></TheHeader>
-
-  <TheMain></TheMain>
-  
+  <div>
+    <TheHeader @searchName="onSearch"></TheHeader>
+    <TheMain></TheMain>
+  </div>
 </template>
 
 <script>
@@ -30,5 +30,14 @@
 
 </script>
 
-<style>
+<style lang="scss">
+  @use "./styles/general.scss";
+  @use "./styles/partials/variables" as *;
+
+  .page{
+    height: auto;
+    background: $background-color;
+    background-repeat: no-repeat;
+  }
+  
 </style>
