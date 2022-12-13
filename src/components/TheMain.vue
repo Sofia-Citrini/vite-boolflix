@@ -14,7 +14,7 @@
 <script>
 import SingleCard from "./SingleCard.vue";
 
-import {store, fetchMovies, fetchSeries} from "../store";
+import {store} from "../store";
 
 export default {
     components: {SingleCard},
@@ -22,12 +22,7 @@ export default {
         return {
             store
         }
-    },
-    created(){
-        fetchMovies();
-        fetchSeries();
     }
-    
 }
 
 </script>

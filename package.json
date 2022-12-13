@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "axios": "^1.2.1",
-    "vue": "^3.2.45"
+    "install": "^0.13.0",
+    "npm": "^9.2.0",
+    "vue": "^3.2.45",
+    "vue-lang-code-flags": "^1.0.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",

@@ -6,15 +6,20 @@
         <li>Titolo Originale: {{keyTitleOriginal}}</li>
         <li>Lingua: {{movie.original_language}}</li>
         <li>Voto: {{movie.vote_average}}</li>
-        <li>
+        <li v-if="movie.poster_path !== null">
             <img :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`" 
             alt="">
         </li>
+        <li v-else>No poster image</li>
+        <li><lang-flag :iso="movie.original_language"></lang-flag></li>
     </ul>
 </template>
 
 <script>
+import LangFlag from 'vue-lang-code-flags';
+
     export default {
+        components: {LangFlag},
         props: {
             movie: {
                 type: Object,
@@ -40,3 +45,6 @@
     }
 
 </script>
+
+<style scoped lang="scss">
+</style>

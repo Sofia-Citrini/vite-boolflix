@@ -3,7 +3,7 @@
 <template>
     <header>
         <div>
-            <input type="text" v-model="filterMovies">
+            <input type="text" v-model="filterMovies" placeholder="nome file...">
             <button @click="onSearchClick">Cerca</button>
         </div>
     </header>
