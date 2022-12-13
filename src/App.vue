@@ -35,7 +35,7 @@
   @use "./styles/partials/variables" as *;
 
   .page{
-    height: auto;
+    height: 100%;
     background: $background-color;
     background-repeat: no-repeat;
   }

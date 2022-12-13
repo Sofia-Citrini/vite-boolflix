@@ -2,7 +2,7 @@
 
 <template>
     <div class="my-card">
-        <div>
+        <div class="img-container">
             <img v-if="movie.poster_path !== null" 
                 :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`"  alt="" class="img-fluid">
             <img v-else
@@ -15,7 +15,11 @@
                 <div class="lh-1">{{keyTitleOriginal}}</div>
             </div>
             <div class="py-2">
-                <div class="text">Lingua</div>
+                <div class="text">Voto</div>
+                <div>{{ratingStar}}</div>
+            </div>
+            <div class="py-2">
+                <div class="text" :class="(movie.original_language === '') ? 'd-none' : 'd-block'">Lingua</div>
                 <div><lang-flag :iso="movie.original_language"></lang-flag></div>
             </div>
             <div class="py-2" :class="(movie.overview === '') ? 'd-none' : 'd-block'">
@@ -65,6 +69,13 @@ import LangFlag from 'vue-lang-code-flags';
                 } else if(this.movie.original_name) {
                     return this.movie.original_name
                 }
+            },
+            ratingStar(){
+                let vote = this.movie.vote_average
+                let partialRating = (vote / 2)
+                let rating = Math.round(partialRating);
+        
+                return rating
             }
         }
     }
