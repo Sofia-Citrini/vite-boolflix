@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <TheHeader @searchName="onSearch"></TheHeader>
-    <TheMain></TheMain>
-  </div>
+  <TheHeader @searchName="onSearch"></TheHeader>
+  <TheMain></TheMain>
+
+  <footer class="py-4 flex-shrink-0"></footer>
+
 </template>
 
 <script>
@@ -35,9 +36,12 @@
   @use "./styles/partials/variables" as *;
 
   .page{
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: $background-color;
     background-repeat: no-repeat;
+    overflow: auto;
   }
   
 </style>

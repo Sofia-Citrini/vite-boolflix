@@ -1,7 +1,7 @@
 <!-- searchbar: input + button -->
 
 <template>
-    <header class="p-3">
+    <header class="p-3 flex-shrink-1">
         <div class="d-flex justify-content-between align-items-center">
             <h1>BOOLFLIX</h1>
         

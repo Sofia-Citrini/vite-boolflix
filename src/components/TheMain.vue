@@ -4,6 +4,10 @@
     <section>
         <div class="container pb-5">
             <div class="title">FILM</div>
+            <div class="alert alert-danger" role="alert" 
+                :class="(store.movies.length !== 0) ? 'd-none' : 'd-block'">
+                Spiacente, non ci sono risultati! Cerca per trovare i tuoi film preferiti.
+            </div>
             <div class="row g-3">
                 <div class="col-4 col-md-3 col-lg-2"
                     v-for="(element, i) in store.movies">
@@ -12,6 +16,10 @@
             </div>
 
             <div class="pt-5 title">SERIE TV</div>
+            <div class="alert alert-danger" role="alert" 
+                :class="(store.series.length !== 0) ? 'd-none' : 'd-block'">
+                Spiacente, non ci sono risultati! Cerca per trovare le tue serie preferite.
+            </div>
             <div class="row g-3">
                 <div class="col-4 col-md-3 col-lg-2"
                     v-for="(element, i) in store.series">
@@ -46,7 +54,8 @@
         color: #fff;
     }
 
-    .container{
-        min-height: 100%;
+    section{
+        flex-grow: 1;
+        overflow: auto;
     }
 </style>

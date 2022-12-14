@@ -8,6 +8,7 @@ export const store = reactive ({
 })
 
 export function fetchMovies (){
+
     const url = "https://api.themoviedb.org/3"
     axios.get (url + "/search/movie", {
         params: {
@@ -19,11 +20,15 @@ export function fetchMovies (){
     .then ((resp) => {
         console.log (resp.data.results);
 
-        store.movies = resp.data.results
+        store.movies = resp.data.results;
+    })
+    .catch ((error) => {
+        alert("A causa di un errore, l'operazione non é andata a buon fine");
     })
 }
 
 export function fetchSeries (){
+  
     const url = "https://api.themoviedb.org/3"
     axios.get (url + "/search/tv", {
         params: {
@@ -35,6 +40,9 @@ export function fetchSeries (){
     .then ((resp) => {
         console.log (resp.data.results);
 
-        store.series = resp.data.results
+        store.series = resp.data.results;
+    })
+    .catch ((error) => {
+        alert("A causa di un errore, l'operazione non é andata a buon fine")
     })
 }
