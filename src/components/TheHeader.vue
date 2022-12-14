@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { store } from '../store';
+
     export default {
         data() {
             return {
@@ -23,6 +25,8 @@
         methods: {
             onSearchClick(){
                 this.$emit("searchName", this.filterMovies);
+
+                store.clickSerchBtn = true;
             }
         }
     }
