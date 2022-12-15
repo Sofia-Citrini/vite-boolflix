@@ -1,0 +1,39 @@
+@use "./variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.title{
+    font-family:'Bebas Neue', cursive;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.my-card {
+    position: relative;
+
+    .my-card-body {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow-y: auto;
+        display: none;
+        color: #fff;
+
+        .text {
+            font-size: .7rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: .9rem;
+            line-height: 1rem;
+            text-align: justify;
+        }
+    }
+}
+
+.my-card:hover .my-card-body {
+    display: block;
+    background-color: rgba($color-secondary, .8);
+}

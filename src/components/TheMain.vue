@@ -5,6 +5,7 @@
     
     <section :class="(store.clickSerchBtn === false) ? 'd-none' : 'd-block'">
         <div class="container pb-5">
+
             <div class="title">FILM</div>
             <div class="alert alert-danger" role="alert" 
                 v-show="store.movies.length === 0">
@@ -51,13 +52,7 @@
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-    .title{
-        font-family:'Bebas Neue', cursive;
-        font-size: 2rem;
-        color: #fff;
-    }
+    @use '../styles/partials/utilities' as *;
 
     section{
         flex-grow: 1;

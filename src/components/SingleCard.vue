@@ -73,39 +73,9 @@ export default {
 
 <style scoped lang="scss">
 @use "../styles/partials/variables" as *;
+@use '../styles/partials/utilities' as *;
 
-    .my-card {
-        position: relative;
-
-        .my-card-body {
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            overflow-y: auto;
-            display: none;
-            color: #fff;
-
-            .text {
-                font-size: .7rem;
-                font-weight: 600;
-            }
-
-            p {
-                font-size: .9rem;
-                line-height: 1rem;
-                text-align: justify;
-            }
-
-            .fa-star{
-                color: $color-primary;
-            }
-        }
-    }
-
-    .my-card:hover .my-card-body {
-        display: block;
-        background-color: rgba($color-secondary, .8);
+    .fa-star{
+        color: $color-primary;
     }
 </style>
