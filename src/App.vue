@@ -1,5 +1,6 @@
 <template>
   <TheHeader @searchName="onSearch"></TheHeader>
+  
   <TheMain></TheMain>
 
   <footer class="py-4 flex-shrink-0"></footer>

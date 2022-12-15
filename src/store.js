@@ -38,7 +38,6 @@ export function fetchSeries (){
     })
     .then ((resp) => {
         console.log (resp.data.results);
-
         store.series = resp.data.results;
     })
     .catch ((error) => {

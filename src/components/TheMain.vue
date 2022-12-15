@@ -20,7 +20,7 @@
 
             <div class="pt-5 title">SERIE TV</div>
             <div class="alert alert-danger" role="alert" 
-                v-show="store.movies.length === 0">
+                v-show="store.series.length === 0">
                 Spiacenti, non ci sono risultati! Cerca per trovare le tue serie preferite.
             </div>
             <div class="row g-3">
