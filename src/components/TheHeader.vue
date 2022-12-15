@@ -3,7 +3,7 @@
 <template>
     <header class="p-3 flex-shrink-1">
         <div class="d-flex justify-content-between align-items-center">
-            <h1>BOOLFLIX</h1>
+            <h1 @click="refreshPage">BOOLFLIX</h1>
         
             <div class="search-group">
                 <button @click="onSearchClick"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -20,6 +20,11 @@ import { store } from '../store';
         data() {
             return {
                 filterMovies:""
+            }
+        },
+        computed: {
+            refreshPage(){
+                window.location.reload();
             }
         },
         methods: {
@@ -40,6 +45,10 @@ import { store } from '../store';
         font-family: 'Bebas Neue', cursive;
         color: $color-primary;
         font-size: 3rem;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .search-group {
